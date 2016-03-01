@@ -31,10 +31,11 @@ set smartindent
 set incsearch
 set hlsearch
 
-"set lines=35 columns=150
-"set colorcolumn=120
-
-
+" THIS IS FOR REMEMBERING THE CURSOR POSITION WHEN REOPENING A FILE
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" NOT IN USE
+"set lines=35 columns=150
+"set colorcolumn=120
