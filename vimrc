@@ -1,5 +1,5 @@
 " LOAD PATHOGEN ADD ON MANAGER
-" To add a plugin frim git run the following code:
+" To add a plugin from git run the following code:
 " cd ~/.vim
 " $ git submodule add git@source/pluginname.git bundle/pluginname
 
@@ -9,9 +9,16 @@ execute pathogen#infect()
 filetype on
 syntax on
 set background=dark
+"set background=light
 colorscheme solarized
 set number
 set cursorline 
+set laststatus=2
+let g:lightline = {
+    \ 'colorscheme' : 'solarized'
+    \ }
+"set colorcolumn=120
+"set ruler
 
 " SMART DEFAULTS
 set nocompatible
@@ -38,4 +45,3 @@ endif
 
 " NOT IN USE
 "set lines=35 columns=150
-"set colorcolumn=120
