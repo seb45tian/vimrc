@@ -8,15 +8,11 @@ execute pathogen#infect()
 " STANDARD SETTINGS
 filetype on
 syntax on
-<<<<<<< Updated upstream
-set background=dark
-"set background=light
-=======
 "set t_Co=16
 "let g:solarized_termcolors=256
->>>>>>> Stashed changes
 colorscheme solarized
 set background=dark
+"set background=light
 set number
 set cursorline 
 set laststatus=2
