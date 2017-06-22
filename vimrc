@@ -8,6 +8,8 @@ execute pathogen#infect()
 " STANDARD SETTINGS
 filetype on
 syntax on
+"set t_Co=16
+"let g:solarized_termcolors=256
 
 " set background depending on color scheme env var
 let color_scheme_var=$ITERM_PROFILE
@@ -19,6 +21,10 @@ if color_scheme_var == 'Light'
 endif
 
 colorscheme solarized
+set number
+set cursorline 
+set laststatus=2
+let g:lightline = {
 set number
 set cursorline 
 set laststatus=2
