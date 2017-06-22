@@ -8,8 +8,16 @@ execute pathogen#infect()
 " STANDARD SETTINGS
 filetype on
 syntax on
-set background=dark
-"set background=light
+
+" set background depending on color scheme env var
+let color_scheme_var=$ITERM_PROFILE
+if color_scheme_var == 'Dark'
+    set background=dark
+endif
+if color_scheme_var == 'Light'
+    set background=light
+endif
+
 colorscheme solarized
 set number
 set cursorline 
@@ -17,7 +25,7 @@ set laststatus=2
 let g:lightline = {
     \ 'colorscheme' : 'solarized'
     \ }
-"set colorcolumn=120
+set colorcolumn=80
 "set ruler
 
 " SMART DEFAULTS
@@ -32,7 +40,7 @@ set autoindent
 set shiftwidth=4
 set tabstop=4
 set expandtab
-set smartindent
+" set smartindent
 
 " FOR BETTER SEARCH
 set incsearch
