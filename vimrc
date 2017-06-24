@@ -24,7 +24,6 @@ colorscheme solarized
 set number
 set cursorline 
 set laststatus=2
-let g:lightline = {
 set number
 set cursorline 
 set laststatus=2
