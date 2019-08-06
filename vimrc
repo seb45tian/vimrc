@@ -19,7 +19,7 @@ set laststatus=2
 let g:lightline = {
     \ 'colorscheme' : 'solarized'
     \ }
-"set colorcolumn=120
+set colorcolumn=80
 "set ruler
 
 " SMART DEFAULTS
@@ -45,5 +45,17 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" TO PREVENT JEDI-VIM FROM OPENING DOCSTRING WITH AUTOCOMPLETE IN PYTHON FILES
+autocmd FileType python setlocal completeopt-=preview
+
 " NOT IN USE
 "set lines=35 columns=150
+
+" custom text-object for numerical values
+function! Numbers()
+    call search('\d\([^0-9\.]\|$\)', 'cW')
+    normal v
+    call search('\(^\|[^0-9\.]\d\)', 'becW')
+endfunction
+xnoremap in :<C-u>call Numbers()<CR>
+onoremap in :normal vin<CR>
